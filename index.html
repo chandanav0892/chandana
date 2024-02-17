@@ -96,6 +96,21 @@
             animation: blink 0.7s infinite;
         }
 
+        #profile-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #profile-image {
+            width: 250px; 
+            height: 250px; 
+            border-radius: 50%;
+            border: 5px solid #fff; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+        }
+
         @keyframes typing {
             0%, 25% { width: 0; }
             50%, 100% { width: 100%; }
@@ -114,11 +129,11 @@
         }
 
         #about-left {
-            width: 60%;
+            width: 40%;
         }
 
         #about-right {
-            width: 35%;
+            width: 40%;
             margin-right: 50px;
         }
 
@@ -305,6 +320,9 @@
 </nav>
 
 <section id="home">
+    <div id="profile-image-container">
+        <img src="chandana.jpeg" alt="Chandana's Profile Image" id="profile-image">
+    </div>
     <h2>Hi, This is Chandana!</h2>
     <p>
         <span class="word">Developer...</span>
