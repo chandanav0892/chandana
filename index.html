@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <title>Chandana's Portfolio</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+
+        }
+        .navbar {
+            min-height: 80px;
+            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-toggler-icon {
+            background-color: rgb(210, 98, 116); /* Change color to pink */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        section {
+            min-height: 500px;
+            padding: 20px;
+        }
+
+        #home {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            padding: 40px;
+        }
+
+        #home h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+        }
+
+        #home p {
+            font-size: 24px;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+        }
+
+        #home .word {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 1px solid #fff;
+            animation: typing 3s steps(8, end) infinite;
+        }
+
+        #home .blink::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background-color: pink;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes typing {
+            0%, 25% { width: 0; }
+            50%, 100% { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 0; }
+            51%, 100% { opacity: 1; }
+        }
+
+        #about {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to left, #ff8c8c, #ff4d94);
+            padding: 40px;
+        }
+
+        #about-left {
+            width: 60%;
+        }
+
+        #about-right {
+            width: 35%;
+            margin-right: 50px;
+        }
+
+        #about h1 {
+            font-size: 36px;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #about-content {
+            font-size: 18px;
+            line-height: 1.5;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+        }
+
+        #skills {
+            font-size: 18px;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+        }
+
+        .info-button {
+            background-color: #ff4d94;
+            border: none;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #projects {
+            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            text-align: center;
+        }
+
+        #projects h2 {
+            font-size: 36px;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+        }
+
+        .text-center {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #projects p {
+            font-size: 24px;
+            font-family: 'Comic Sans MS', cursive;
+            color: #fff; /* Text color */
+            background: #a5164f; /* Background color */
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+
+        #contact {
+            background: linear-gradient(to left, #ff8c8c, #ff4d94);
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 36px;
+            font-family: 'Comic Sans MS', cursive;
+            font-weight: bold;
+        }
+
+        #contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the values for the shadow effect */
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            border: 1px solid rgb(5, 5, 5);
+        }
+
+        .btn {
+            background-color: #a5164f;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            color: black;
+            border: 1px solid rgb(5, 5, 5);
+        }
+        footer {
+            background-color: black;
+            color: #fff;
+            padding: 20px; /* Add padding for spacing inside the footer */
+        }
+
+        .social-link {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 576px) {
+            #home h2 {
+                font-size: 24px; /* Adjust font size for smaller screens */
+            }
+
+            #home p {
+                font-size: 18px; /* Adjust font size for smaller screens */
+            }
+
+            #about h1 {
+                font-size: 24px; /* Adjust font size for smaller screens */
+            }
+
+            #about {
+                flex-direction: column;
+            }
+
+            #about-left, #about-right {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            #about-right {
+                margin-top: 20px;
+            }
+
+            #about-content {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            #skills {
+                width: 100%;
+            }
+
+            #contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+    <a class="navbar-brand" href="#">Chandana V</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section id="home">
+    <h2>Hi, This is Chandana!</h2>
+    <p>
+        <span class="word">Developer...</span>
+        <span class="blink"></span>
+    </p>
+    <p>
+        <span class="word">UI/UX Designer...</span>
+        <span class="blink"></span>
+    </p>
+    <p>
+        <span class="word">Data Science Enthusiast...</span>
+        <span class="blink"></span>
+    </p>
+</section>
+
+<section id="about">
+    <div id="about-left">
+        <h1>About Me</h1>
+        <div id="about-content">
+            <p>Hi, I'm Chandana V, a passionate and results-driven developer with a strong background in front-end and back-end technologies. I specialize in creating modern, responsive, and user-friendly web applications.</p>
+            <p>As a developer, I am proficient in technologies such as HTML, CSS, JavaScript, and popular front-end frameworks like React. On the back-end, I am experienced in Python, MongoDB. I am also comfortable working with version control systems like Git.</p>
+            <p>Outside of coding, I love Sketching Cartoons, Cooking and Photography. I am always eager to learn and take on new challenges.</p>
+        </div>
+    </div>
+    <div id="about-right">
+        <div id="skills">
+            <h3>Skills</h3>
+            <button class="info-button">HTML</button>
+            <button class="info-button">CSS</button>
+            <button class="info-button">JavaScript</button>
+            <button class="info-button">ReactJS</button>
+            <button class="info-button">Python</button>
+            <button class="info-button">MongoDB</button>
+            <button class="info-button">Git</button>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="text-center">
+        <p>Coming soon...</p>
+    </div>
+</section>
+
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div id="contact-form">
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center text-black py-2">
+        <p>&copy; 2024 Chandana's Portfolio. All rights reserved.</p>
+        <div>
+            <!-- Social media links with Font Awesome icons -->
+            <a href="https://www.linkedin.com/in/chandana0892/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/chandanav0892" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <!-- <a href="https://twitter.com/your-twitter-handle" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a> -->
+            <!-- <a href="https://www.youtube.com/your-youtube-channel" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a> -->
+        </div>
+    </div>
+</footer>
+
+
+
+<script>
+    // Smooth scroll to section
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
