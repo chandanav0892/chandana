@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta property="og:title" content="Chandana's Portfolio">
     <meta property="og:description" content="Portfolio of Chandana V - Developer, UI/UX Designer, Data Science Enthusiast">
-    <meta property="og:image" content="https://www.dropbox.com/scl/fi/iegfh5dyxnh6n5i9xu0x1/portfolio-thumbnail.png?rlkey=7s1d66cnv7gnraigb383gnosj&dl=0">
+    <meta property="og:image" content="portfolio.jpg">
     <meta property="og:url" content="https://chandanav0892.github.io/chandana/">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./fontawesome-free-6.5.1-web/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -18,16 +17,16 @@
     <title>Chandana's Portfolio</title>
     <style>
         body {
-            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            background: linear-gradient(to right, #9b8cff, #5820db);
             font-family: 'Comic Sans MS', 'Times New Roman';
         }
         .navbar {
             min-height: 80px;
-            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            background: linear-gradient(to right, #9b8cff, #5820db);
         }
 
         .navbar-brand {
-            color: #fff;
+            color: rgb(0, 0, 0) !important;
             font-family: 'Comic Sans MS', 'Times New Roman';
             font-size: 24px;
             font-weight: bold;
@@ -38,7 +37,7 @@
         }
 
         .navbar-nav .nav-link {
-            color: #fff;
+            color: #fff !important;
             font-family: 'Comic Sans MS', 'Times New Roman';
             font-size: 18px;
             font-weight: bold;
@@ -56,8 +55,9 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            background: linear-gradient(to right, #9b8cff, #5820db);
             padding: 40px;
+            color: #fff;
         }
 
         #home h2 {
@@ -124,8 +124,10 @@
         #about {
             display: flex;
             justify-content: space-between;
-            background: linear-gradient(to left, #ff8c8c, #ff4d94);
+            background: linear-gradient(to left, #9b8cff, #5820db);
             padding: 40px;
+            color: #fff;
+            margin-top: 10px;
         }
 
         #about-left {
@@ -168,13 +170,13 @@
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 4px;
-            background-color: #a5164f;
-            color: black;
+            background-color: #1b0a7d;
+            color: #fff;
             border: 1px solid rgb(5, 5, 5);
         }
 
         #projects {
-            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            background: linear-gradient(to right, #9b8cff, #5820db);
             text-align: center;
         }
 
@@ -196,7 +198,7 @@
             font-size: 24px;
             font-family: 'Comic Sans MS', 'Times New Roman';
             color: #fff; 
-            background: #a5164f; 
+            background: #1b0a7d; 
             padding: 10px 20px;
             border-radius: 8px;
             display: inline-block;
@@ -204,7 +206,7 @@
 
 
         #contact {
-            background: linear-gradient(to left, #ff8c8c, #ff4d94);
+            background: linear-gradient(to left, #9b8cff, #5820db);
             text-align: center;
         }
 
@@ -229,17 +231,17 @@
             width: 100%;
             padding: 10px;
             box-sizing: border-box;
-            background: linear-gradient(to right, #ff8c8c, #ff4d94);
+            background: linear-gradient(to right, #9b8cff, #5820db);
             border: 1px solid rgb(5, 5, 5);
         }
 
         .btn {
-            background-color: #a5164f;
+            background-color: #1b0a7d;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             border-radius: 4px;
-            color: black;
+            color: #fff;
             border: 1px solid rgb(5, 5, 5);
         }
         footer {
@@ -358,6 +360,11 @@
             <button class="info-button">MongoDB</button>
             <button class="info-button">Git</button>
         </div>
+        <br />
+        <div id="skills">
+            <h3><strong>Certifications</strong></h3>
+            <button class="info-button">PCEP</button>
+        </div>
     </div>
 </section>
 
@@ -367,6 +374,43 @@
         <p>Coming soon...</p>
     </div>
 </section>
+
+<!-- <section id="projects">
+    <h2>Projects</h2>
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="project1.jpg" class="card-img-top" alt="Project 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Description of Project 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="project2.jpg" class="card-img-top" alt="Project 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Description of Project 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="project3.jpg" class="card-img-top" alt="Project 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Description of Project 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
 
 
 <section id="contact">
