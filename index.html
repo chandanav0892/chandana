@@ -178,6 +178,7 @@
         #projects {
             background: linear-gradient(to right, #9b8cff, #5820db);
             text-align: center;
+            color: #fff;
         }
 
         #projects h2 {
@@ -208,6 +209,7 @@
         #contact {
             background: linear-gradient(to left, #9b8cff, #5820db);
             text-align: center;
+            color: #fff;
         }
 
         #contact h2 {
@@ -245,7 +247,7 @@
             border: 1px solid rgb(5, 5, 5);
         }
         footer {
-            background-color: black;
+            background-color: rgb(0, 0, 0);
             color: #fff;
             padding: 20px; 
         }
@@ -253,6 +255,21 @@
         .social-link {
             font-size: 24px;
             margin-right: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-link-home {
+            margin-right: 10px; /* Adjust the spacing between icons if needed */
+        }
+
+        .social-link-home i {
+            font-size: 40px;
+            margin-right: 10px;
+            filter: brightness(0); /* Adjust the value (between 0 and 1) to control the darkness */
         }
 
         @media (max-width: 576px) {
@@ -338,7 +355,21 @@
         <span class="word">Data Science Enthusiast...</span>
         <span class="blink"></span>
     </p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/chandana0892/" target="_blank" class="social-link-home"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/chandanav0892" target="_blank" class="social-link-home"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/chandanav0892/" target="_blank" class="social-link-home">
+            <img src="leetcode-home.png" alt="LeetCode" width="40" height="40">
+        </a>
+    </div>
+    <br />
+    <div>
+        <button class="info-button">
+            <a href="#projects" class="nav-link">Projects</a>
+        </button>
+    </div>
 </section>
+
 
 <section id="about">
     <div id="about-left">
@@ -441,6 +472,9 @@
         <div>
             <a href="https://www.linkedin.com/in/chandana0892/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/chandanav0892" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/chandanav0892/" target="_blank" class="social-link">
+                <img src="leetcode-footer.png" alt="LeetCode" width="24" height="24">
+            </a>
             <!-- <a href="https://twitter.com/your-twitter-handle" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a> -->
             <!-- <a href="https://www.youtube.com/your-youtube-channel" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a> -->
         </div>
